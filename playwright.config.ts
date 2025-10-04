@@ -6,12 +6,13 @@ export default defineConfig({
 
   use: {
     baseURL: 'http://localhost:3000/',
-    headless: false,
-    launchOptions: { slowMo: 1000 }
+    headless: true,
+    launchOptions: { slowMo: 1000 },
   },
 
   webServer: {
     command: 'npm start',
-    url: 'http://localhost:3000/'
+    url: 'http://localhost:3000/',
+    reuseExistingServer: true,
   }
 });
